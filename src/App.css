@@ -1,0 +1,2041 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap');
+
+:root {
+  --ivory: #f8f3e7;
+  --emerald: #1f4d3a;
+  --gold: #b08d57;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--ivory);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.welcome {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 700px;
+  width: 100%;
+  min-height: 80vh;
+  border: 1px solid var(--gold);
+  box-shadow: inset 0 0 0 8px var(--ivory),
+              inset 0 0 0 9px var(--gold);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 auto 24px;
+  animation: fadeUp 1s ease-out both;
+}
+
+.title {
+  margin: 20px 0 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  letter-spacing: 6px;
+  font-weight: 500;
+  color: #1f4d3a;
+  animation: fadeUp 1s ease-out 0.2s both;
+}
+
+.subtitle {
+  margin: 0 0 8px;
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: #1f4d3a;
+  text-transform: uppercase;
+  animation: fadeUp 1s ease-out 0.4s both;
+}
+
+.date {
+  margin: 0 0 30px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #b08d57;
+  animation: fadeUp 1s ease-out 0.6s both;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  animation: fadeUp 1s ease-out 0.8s both;
+}
+
+.button {
+  min-width: 180px;
+  padding: 14px 28px;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--emerald);
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--emerald);
+  color: var(--ivory);
+}
+
+.invitation {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  max-width: 700px;
+  min-height: 760px;
+
+  margin: 0 auto;
+  padding: 34px 45px;
+
+  box-sizing: border-box;
+
+  background-color: var(--ivory);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.invitation-decor {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: fill;
+
+  z-index: 3;
+  pointer-events: none;
+}
+
+
+.invitation-content {
+  position: relative;
+  z-index: 4;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* MONOGRAM */
+
+.invitation-logo {
+  width: 120px;
+  height: auto;
+
+  display: block;
+
+  margin: 0 auto 10px;
+
+  object-fit: contain;
+}
+
+/* TOGETHER WITH THEIR FAMILIES */
+
+.invitation-intro {
+  margin: 0 0 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--emerald);
+}
+
+.couple-names {
+  margin: 0 0 28px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 74px;
+  font-weight: 500;
+  line-height: 0.78;
+  letter-spacing: 0;
+  color: var(--emerald);
+}
+
+.invitation-message {
+  max-width: 500px;
+  margin: 0 0 17px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  line-height: 1.4;
+  color: var(--emerald);
+}
+
+/* DATE */
+
+.wedding-date {
+  width: 100%;
+  max-width: 490px;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin: 0 auto 18px;
+}
+
+.date-side {
+  position: relative;
+
+  padding: 9px 0;
+
+  border-top: 1px solid var(--emerald);
+  border-bottom: 1px solid var(--emerald);
+
+  text-align: center;
+}
+
+.date-side span {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--emerald);
+}
+
+.date-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: var(--emerald);
+}
+
+.date-center .month {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.date-center strong {
+  margin: 1px 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 72px;
+  line-height: 0.72;
+  font-weight: 500;
+  color: var(--emerald);
+}
+
+.date-center .year {
+  margin-top: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* VENUE / COLORS / RSVP */
+
+.venue,
+.colors,
+.rsvp {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto 12px;
+  text-align: center;
+  color: var(--emerald);
+}
+
+.venue h2,
+.colors h2,
+.rsvp h2 {
+  margin: 0 0 5px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.venue p,
+.colors p,
+.rsvp p {
+  margin: 3px 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  line-height: 1.35;
+}
+
+.colors {
+  padding-top: 2px;
+}
+
+.rsvp {
+  padding-top: 2px;
+  margin-bottom: 0;
+}
+
+.gold-divider-small {
+  margin: 0 auto 28px;
+  width: 45px;
+}
+
+.rsvp a {
+  color: var(--emerald);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.rsvp a:hover {
+  color: var(--gold);
+}
+
+.back-button {
+  position: relative;
+
+  margin-top: 18px;
+  padding: 9px 18px;
+
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+
+  background-color: transparent;
+  color: var(--emerald);
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: var(--emerald);
+  color: var(--ivory);
+}
+
+.back-button:hover {
+  background-color: var(--emerald);
+  color: var(--ivory);
+}
+
+/* =========================
+   PROGRAMME PAGE
+========================= */
+
+.programme {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  min-height: 720px;
+  margin: 0 auto;
+  padding: 50px;
+  box-sizing: border-box;
+  background-color: var(--ivory);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.programme-content {
+  width: 100%;
+  text-align: center;
+  color: var(--emerald);
+}
+
+.programme-content h1 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.programme-subtitle {
+  margin: 8px 0 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 2px;
+  color: var(--emerald);
+}
+
+.programme-divider {
+  width: 70px;
+  height: 1px;
+  margin: 0 auto 35px;
+  background-color: var(--gold);
+}
+
+.programme-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.programme-time {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.programme-event {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.programme .back-button {
+  margin-top: 25px;
+}
+
+.reception-button {
+  margin-top: 35px;
+  padding: 12px 22px;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  background-color: var(--emerald);
+  color: var(--ivory);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.reception-button:hover {
+  background-color: transparent;
+  color: var(--emerald);
+}
+
+/* =========================
+   CHURCH WEDDING PROGRAMME
+========================= */
+
+.programme-section-title {
+  margin: 0 0 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--emerald);
+}
+
+.service-list {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(176, 141, 87, 0.35);
+  text-align: left;
+}
+
+.service-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gold);
+  text-align: center;
+}
+
+.service-event {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+  color: var(--emerald);
+}
+
+.service-event strong {
+  display: block;
+  font-weight: 600;
+}
+
+.service-note {
+  display: block;
+  margin-top: 3px;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: var(--gold);
+}
+
+.programme .back-button {
+  margin-top: 30px;
+}
+
+/* =========================
+   HYMN
+========================= */
+
+.hymn-button {
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--emerald);
+  cursor: pointer;
+}
+
+.hymn-button strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+.hymn-toggle {
+  display: block;
+  margin-top: 7px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  color: var(--gold);
+}
+
+.hymn-content {
+  margin-top: 18px;
+  padding: 20px;
+  border-left: 1px solid var(--gold);
+  background: rgba(176, 141, 87, 0.06);
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--emerald);
+}
+
+.hymn-content h3 {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.hymn-content p {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.hymn-content .hymn-refrain {
+  font-style: italic;
+}
+
+.hymn-content .hymn-refrain strong {
+  font-style: normal;
+}
+
+/* =========================
+   OFFICIATING MINISTERS
+========================= */
+
+.ministers-section {
+  width: 100%;
+  max-width: 520px;
+  margin: 55px auto 0;
+}
+
+.programme-section-title {
+  margin: 0 0 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-align: center;
+  color: var(--emerald);
+}
+
+.minister-list {
+  width: 100%;
+}
+
+.minister-item {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(176, 141, 87, 0.25);
+  text-align: left;
+}
+
+.minister-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gold);
+  text-align: center;
+}
+
+.minister-details strong {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  color: var(--emerald);
+}
+
+.minister-details span {
+  display: block;
+  margin-top: 3px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  line-height: 1.4;
+  color: var(--gold);
+}
+
+.minister-other {
+  border-bottom: none;
+  padding-top: 20px;
+}
+
+/* =========================
+   PROGRAMME FRAME
+========================= */
+
+.programme-frame {
+  position: absolute;
+  inset: 28px;
+  border: 1px solid var(--gold);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.programme-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   RECEPTION PROGRAMME PAGE
+========================= */
+
+.reception-page {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  min-height: 720px;
+  margin: 0 auto;
+  padding: 60px 50px;
+  box-sizing: border-box;
+  background-color: var(--ivory);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.reception-content {
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+  color: var(--emerald);
+}
+
+/* Main heading */
+
+.reception-content h1 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 46px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+/* Couple names */
+
+.reception-content h2 {
+  margin: 10px 0 22px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 58px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1;
+  color: var(--emerald);
+}
+
+/* Gold divider */
+
+.reception-content .programme-divider {
+  width: 70px;
+  height: 1px;
+  margin: 0 auto 35px;
+  background-color: var(--gold);
+}
+
+/* ORDER OF EVENTS */
+
+.reception-content .programme-section-title {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto 32px;
+  padding: 0 18px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-align: center;
+  color: var(--emerald);
+}
+
+.programme-section-title::before,
+.programme-section-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 35px;
+  height: 1px;
+  background-color: var(--gold);
+}
+
+.programme-section-title::before {
+  right: 100%;
+}
+
+.programme-section-title::after {
+  left: 100%;
+}
+
+/* Programme list */
+
+.reception-list {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Individual programme item */
+
+.reception-list .service-item {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  align-items: center;
+  gap: 18px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid rgba(176, 141, 87, 0.28);
+
+  text-align: left;
+}
+
+/* Number */
+
+.reception-list .service-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--gold);
+  text-align: center;
+}
+
+/* Event */
+
+.reception-list .service-event {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.6px;
+  color: var(--emerald);
+}
+
+/* Special Dance heading */
+
+.reception-list .service-event strong {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+/* Special Dance list */
+
+.dance-list {
+  margin: 7px 0 0;
+  padding-left: 18px;
+}
+
+.dance-list li {
+  margin: 4px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  line-height: 1.4;
+  color: var(--emerald);
+}
+
+/* Back button */
+
+.reception-page .back-button {
+  margin-top: 35px;
+}
+
+
+/* =========================
+   RECEPTION MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .reception-page {
+    min-height: calc(100vh - 20px);
+    padding: 42px 18px 30px;
+    align-items: flex-start;
+  }
+
+  .reception-content {
+    max-width: 100%;
+  }
+
+  .reception-content h1 {
+    font-size: 36px;
+    letter-spacing: 3px;
+  }
+
+  .reception-content h2 {
+    margin: 8px 0 18px;
+    font-size: 46px;
+    letter-spacing: 1px;
+  }
+
+  .reception-content .programme-divider {
+    width: 55px;
+    margin-bottom: 28px;
+  }
+
+  .reception-content .programme-section-title {
+    margin-bottom: 22px;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .reception-list {
+    max-width: 100%;
+  }
+
+  .reception-list .service-item {
+    grid-template-columns: 35px 1fr;
+    gap: 12px;
+    padding: 13px 0;
+  }
+
+  .reception-list .service-number {
+    font-size: 18px;
+  }
+
+  .reception-list .service-event {
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+  }
+
+  .dance-list {
+    margin-top: 6px;
+    padding-left: 16px;
+  }
+
+  .dance-list li {
+    font-size: 9px;
+    margin: 3px 0;
+  }
+
+  .reception-page .back-button {
+    margin-top: 28px;
+    font-size: 9px;
+    padding: 9px 16px;
+  }
+}
+
+.reception-frame {
+  position: absolute;
+  inset: 28px;
+  border: 1px solid var(--gold);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.reception-content {
+  position: relative;
+  z-index: 1;
+}
+
+.reception-date {
+  margin: -8px 0 22px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--gold);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+
+  main {
+      min-height: 100vh;
+      padding: 10px;
+      align-items: center;
+  }
+
+  .welcome {
+    width: 100%;
+    min-height: calc(100vh - 20px);
+
+    padding: 45px 20px;
+
+    box-sizing: border-box;
+
+    justify-content: center;
+  }
+
+  .welcome .logo {
+    width: 135px;
+    margin-bottom: 22px;
+  }
+
+  .welcome .title {
+    margin: 8px 0 10px;
+
+    font-size: 32px;
+    letter-spacing: 4px;
+
+    line-height: 1.1;
+  }
+
+  .welcome .subtitle {
+    margin-bottom: 10px;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .welcome .date {
+    margin-bottom: 32px;
+
+    font-size: 16px;
+    letter-spacing: 1.5px;
+  }
+
+  .welcome .actions {
+    width: 100%;
+    max-width: 280px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .welcome .button {
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 14px 18px;
+
+    margin: 0;
+
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  /* INVITATION PAGE */
+
+  .invitation {
+    min-height: calc(100vh - 20px);
+
+    padding: 34px 16px 26px;
+
+    align-items: center;
+  }
+
+  .invitation-logo {
+    width: 92px;
+    margin-bottom: 9px;
+  }
+
+  .invitation-intro {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+  }
+
+  .couple-names {
+    font-size: 57px;
+    margin-bottom: 18px;
+  }
+
+  .invitation-message {
+    max-width: 310px;
+    font-size: 9px;
+    letter-spacing: 0.8px;
+  }
+
+  .date-side span {
+    font-size: 9px;
+  }
+
+  .date-center .month {
+    font-size: 12px;
+  }
+
+  .date-center strong {
+    font-size: 61px;
+  }
+
+  .date-center .year {
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .venue,
+  .colors,
+  .rsvp {
+    max-width: 300px;
+  }
+
+  .venue h2,
+  .colors h2,
+  .rsvp h2 {
+    font-size: 9.5px;
+  }
+
+  .venue p,
+  .colors p,
+  .rsvp p {
+    font-size: 9.5px;
+  }
+
+  .back-button {
+    margin-top: 30px;
+    padding: 8px 16px;
+    font-size: 9px;
+  }
+}
+
+
+/* =========================
+   WEDDING PROGRAMME SELECTION
+========================= */
+
+.programme-choice-page {
+  width: 100%;
+  max-width: 700px;
+  min-height: 80vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  text-align: center;
+
+  background-color: var(--ivory);
+  color: var(--emerald);
+
+  border: 1px solid var(--gold);
+  box-shadow:
+    inset 0 0 0 8px var(--ivory),
+    inset 0 0 0 9px var(--gold);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.programme-choice-page .eyebrow {
+  margin: 0 0 16px;
+  color: var(--emerald);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.programme-choice-page h1 {
+  margin: 0 0 18px;
+  color: var(--emerald);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.programme-choice-page .welcome-description {
+  margin: 0 0 30px;
+  color: var(--emerald);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.programme-choice-page .actions {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 10px;
+  animation: none;
+}
+
+
+.programme-choice-page .button {
+  width: 180px;
+  min-width: 180px;
+  min-height: 48px;
+  padding: 14px 18px;
+  box-sizing: border-box;
+
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--emerald);
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.programme-choice-page .button:hover {
+  background-color: var(--emerald);
+  color: var(--ivory);
+}
+
+
+@media (max-width: 600px) {
+  .programme-choice-page {
+    padding: 35px 20px;
+  }
+
+  .programme-choice-page h1 {
+    font-size: 36px;
+  }
+
+  .programme-choice-page .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .programme-choice-page .button {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+
+.programme-choice-page,
+.programme-choice-page h1,
+.programme-choice-page .eyebrow,
+.programme-choice-page .welcome-description {
+  color: var(--emerald);
+}
+
+.programme-choice-page .welcome-description {
+  opacity: 1;
+}
+
+.programme-choice-page .eyebrow {
+  opacity: 1;
+}
+
+
+/* WEDDING PROGRAMME SELECTION PAGE */
+
+.programme-choice-page .eyebrow,
+.programme-choice-page h1,
+.programme-choice-page .welcome-description {
+  color: var(--emerald);
+}
+
+/* Keep mobile-only adjustments inside this media query */
+@media (max-width: 600px) {
+  .reception-date {
+    margin: -5px 0 18px;
+    font-size: 8px;
+    letter-spacing: 1.3px;
+  }
+
+  .reception-content .programme-section-title {
+    margin-bottom: 24px;
+    padding: 0 12px;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .reception-content .programme-section-title::before,
+  .reception-content .programme-section-title::after {
+    width: 22px;
+  }
+}
+
+
+/* =========================
+   WEDDING GALLERY
+========================= */
+
+.gallery-page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 60px 24px;
+  background: var(--ivory);
+  color: var(--emerald);
+}
+
+.gallery-content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gallery-title {
+  margin: 12px 5;
+  color: var(--emerald);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(42px, 6vw, 68px);
+  font-weight: 500;
+}
+
+.gallery-divider {
+  width: 80px;
+  height: 1px;
+  margin: 20px auto;
+  background: var(--gold);
+}
+
+.gallery-description {
+  max-width: 500px;
+  margin: 0 auto 38px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  line-height: 1.9;
+  letter-spacing: 0.5px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.gallery-item {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  padding: 5px;
+  border: 1px solid var(--gold);
+  background: #eee5d6;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+@media (max-width: 700px) {
+  .gallery-page {
+    padding: 40px 16px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+.gallery-upload {
+  margin: 30px auto;
+  padding: 24px;
+  max-width: 520px;
+  border: 1px solid #b08d57;
+  border-radius: 12px;
+  background: #fffdf8;
+}
+
+.gallery-upload label {
+  display: block;
+  margin-bottom: 10px;
+  color: #1f4d3a;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.gallery-upload p {
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+
+.gallery-upload input {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.gallery-item {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.gallery-lightbox > img {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.gallery-lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .gallery-upload {
+    padding: 16px;
+  }
+
+  .gallery-item img {
+    height: 180px;
+  }
+}
+
+
+
+.gallery-upload {
+  margin: 30px auto;
+  padding: 26px;
+  max-width: 560px;
+  border: 1px solid #b08d57;
+  border-radius: 14px;
+  background: #f8f3e7;
+  box-sizing: border-box;
+}
+
+.gallery-upload-title {
+  margin: 0 0 10px;
+  color: #1f4d3a;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.gallery-upload-description {
+  margin: 0 0 22px;
+  color: #555;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.gallery-upload-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.camera-button,
+.gallery-picker-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 48px;
+  padding: 13px 18px;
+  border: 1px solid #1f4d3a;
+  border-radius: 7px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.camera-button {
+  background: #1f4d3a;
+  color: #f8f3e7;
+}
+
+.gallery-picker-button {
+  background: transparent;
+  color: #1f4d3a;
+}
+
+.camera-button:hover,
+.gallery-picker-button:hover {
+  transform: translateY(-2px);
+}
+
+.gallery-picker-button:hover {
+  background: #1f4d3a;
+  color: #f8f3e7;
+}
+
+.camera-button:disabled,
+.gallery-picker-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.gallery-file-input {
+  display: none;
+}
+
+.gallery-status {
+  margin: 18px auto;
+  max-width: 560px;
+  color: #1f4d3a;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.gallery-item {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.gallery-lightbox > img {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.gallery-lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .gallery-upload {
+    padding: 18px;
+  }
+
+  .gallery-upload-actions {
+    flex-direction: column;
+  }
+
+  .camera-button,
+  .gallery-picker-button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .gallery-item img {
+    height: 180px;
+  }
+}
+
+
+/* Wedding gallery upload card */
+.gallery-upload {
+  width: 100%;
+  max-width: 620px;
+  margin: 36px auto 42px;
+  padding: 34px 28px;
+  box-sizing: border-box;
+  border: 1px solid rgba(176, 141, 87, 0.55);
+  border-radius: 16px;
+  background: #f8f3e7;
+  box-shadow: 0 12px 35px rgba(31, 77, 58, 0.07);
+}
+
+.gallery-kicker {
+  margin: 0 0 10px;
+  color: #a17b43;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-align: center;
+}
+
+.gallery-upload-title {
+  margin: 0 0 12px;
+  color: #1f4d3a;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 500;
+  text-align: center;
+}
+
+.gallery-upload-description {
+  max-width: 440px;
+  margin: 0 auto 26px;
+  color: #68645d;
+  font-size: 0.91rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.gallery-upload-actions {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.camera-button,
+.gallery-picker-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 14px 20px;
+  border: 1px solid #1f4d3a;
+  border-radius: 7px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+  cursor: pointer;
+}
+
+.camera-button {
+  background: #1f4d3a;
+  color: #f8f3e7;
+}
+
+.gallery-picker-button {
+  background: transparent;
+  color: #1f4d3a;
+}
+
+.camera-button:hover,
+.gallery-picker-button:hover {
+  transform: translateY(-2px);
+}
+
+.camera-button:hover {
+  background: #153b2b;
+}
+
+.gallery-picker-button:hover {
+  background: #1f4d3a;
+  color: #f8f3e7;
+}
+
+.camera-button:focus-visible,
+.gallery-picker-button:focus-visible,
+.camera-controls button:focus-visible,
+.camera-close:focus-visible {
+  outline: 3px solid #b08d57;
+  outline-offset: 3px;
+}
+
+.camera-button:disabled,
+.gallery-picker-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.gallery-file-input {
+  display: none;
+}
+
+.gallery-progress,
+.gallery-status {
+  max-width: 620px;
+  margin: 18px auto;
+  color: #1f4d3a;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+/* Live camera dialog */
+.camera-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background: rgba(12, 24, 18, 0.88);
+  backdrop-filter: blur(8px);
+}
+
+.camera-panel {
+  width: 100%;
+  max-width: 560px;
+  padding: 22px;
+  box-sizing: border-box;
+  border: 1px solid rgba(176, 141, 87, 0.65);
+  border-radius: 16px;
+  background: #f8f3e7;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
+}
+
+.camera-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.camera-panel-header .gallery-kicker {
+  text-align: left;
+}
+
+.camera-panel-header h2 {
+  margin: 0;
+  color: #1f4d3a;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.6rem, 5vw, 2.1rem);
+  font-weight: 500;
+}
+
+.camera-close {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(31, 77, 58, 0.2);
+  border-radius: 50%;
+  background: transparent;
+  color: #1f4d3a;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.camera-viewfinder {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 260px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #17221c;
+  aspect-ratio: 3 / 4;
+}
+
+.camera-video,
+.camera-captured-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+
+.camera-message,
+.camera-error {
+  position: relative;
+  z-index: 1;
+  max-width: 85%;
+  color: white;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.camera-error button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  border: 1px solid #b08d57;
+  border-radius: 6px;
+  background: #f8f3e7;
+  color: #1f4d3a;
+  cursor: pointer;
+}
+
+.camera-hint {
+  margin: 15px 0 20px;
+  color: #68645d;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.camera-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.camera-secondary-action,
+.camera-primary-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 12px 15px;
+  border-radius: 7px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+}
+
+.camera-secondary-action {
+  border: 1px solid rgba(31, 77, 58, 0.45);
+  background: transparent;
+  color: #1f4d3a;
+}
+
+.camera-primary-action {
+  border: 1px solid #1f4d3a;
+  background: #1f4d3a;
+  color: #f8f3e7;
+}
+
+.camera-shutter {
+  display: grid;
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  border: 3px solid #1f4d3a;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.camera-shutter span {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #1f4d3a;
+  transition: transform 0.15s ease;
+}
+
+.camera-shutter:hover span {
+  transform: scale(0.9);
+}
+
+.camera-shutter:disabled,
+.camera-secondary-action:disabled,
+.camera-primary-action:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .gallery-upload {
+    margin: 26px auto 32px;
+    padding: 25px 18px;
+  }
+
+  .gallery-upload-actions {
+    flex-direction: column;
+  }
+
+  .camera-button,
+  .gallery-picker-button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .camera-panel {
+    padding: 16px;
+  }
+
+  .camera-viewfinder {
+    min-height: 220px;
+    max-height: 58vh;
+  }
+
+  .camera-controls {
+    flex-wrap: wrap;
+  }
+
+  .camera-secondary-action,
+  .camera-primary-action {
+    flex: 1;
+  }
+
+  .camera-shutter {
+    flex: 0 0 64px;
+  }
+}
+
+
+/* =========================================
+   MARY & PRINCE — CAPTURE THE MOMENT
+   Elegant wedding gallery styling
+========================================= */
+
+.gallery-upload {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 34px 24px;
+  text-align: center;
+  color: #f8f3e7;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(176, 141, 87, 0.13),
+      transparent 58%
+    ),
+    linear-gradient(145deg, #173d30 0%, #0d241c 100%);
+  border: 1px solid rgba(176, 141, 87, 0.55);
+  border-radius: 22px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+}
+
+.gallery-upload-title {
+  margin: 16px 0 10px;
+  color: #f8f3e7;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(25px, 4vw, 32px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.gallery-upload-description {
+  max-width: 540px;
+  margin: 12px auto 20px;
+  color: rgba(248, 243, 231, 0.86);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.gallery-upload-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.camera-button,
+.gallery-picker-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 13px 24px;
+  border: 1px solid #b08d57;
+  border-radius: 999px;
+  background: #b08d57;
+  color: #10271e;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.camera-button:hover,
+.gallery-picker-button:hover {
+  transform: translateY(-2px);
+  background: #d0b078;
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.2);
+}
+
+.camera-button:focus-visible,
+.gallery-picker-button:focus-visible {
+  outline: 3px solid #f8f3e7;
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .gallery-upload {
+    padding: 28px 17px;
+    border-radius: 18px;
+  }
+
+  .gallery-upload-title {
+    font-size: 27px;
+  }
+
+  .gallery-upload-description {
+    font-size: 13px;
+  }
+
+  .gallery-upload-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .camera-button,
+  .gallery-picker-button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+
+.gallery-file-input {
+  display: none !important;
+}
+
