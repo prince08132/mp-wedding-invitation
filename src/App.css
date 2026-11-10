@@ -45,6 +45,12 @@ main {
   animation: fadeUp 1s ease-out both;
 }
 
+.header-logo {
+  filter: brightness(0) invert(1) !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
 .title {
   margin: 20px 0 10px;
   font-family: 'Cormorant Garamond', serif;
@@ -2039,3 +2045,1111 @@ main {
   display: none !important;
 }
 
+
+
+/* =========================================
+   GLOBAL WEBSITE HEADER, NAVIGATION & FOOTER
+========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ivory);
+}
+
+.app-shell {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 0;
+  background: var(--ivory);
+  box-sizing: border-box;
+}
+
+.site-header {
+  width: 100%;
+  padding: 16px 24px 12px;
+  box-sizing: border-box;
+  background: #173d30;
+  color: var(--ivory);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  text-align: left;
+}
+
+.header-logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.header-brand-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.header-kicker {
+  color: #d0b078;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.header-title {
+  color: var(--ivory);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.header-date {
+  margin-top: 3px;
+  color: rgba(248, 243, 231, 0.8);
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+  background: #f8f3e7;
+  border-bottom: 1px solid rgba(176, 141, 87, 0.55);
+  box-shadow: 0 4px 14px rgba(31, 77, 58, 0.06);
+}
+
+.nav-link {
+  min-height: 48px;
+  padding: 0 17px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: var(--emerald);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #9a7540;
+  border-bottom-color: var(--gold);
+}
+
+.app-shell > .welcome,
+.app-shell > .programme-choice-page,
+.app-shell > .invitation,
+.app-shell > .programme,
+.app-shell > .reception-page {
+  align-self: center;
+  margin-top: 34px;
+  margin-bottom: 34px;
+}
+
+.app-shell > .gallery-page {
+  width: 100%;
+  flex: 1;
+}
+
+.site-footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 30px 20px 24px;
+  box-sizing: border-box;
+  background: #173d30;
+  color: var(--ivory);
+  text-align: center;
+}
+
+.footer-couple {
+  margin: 0 0 5px;
+  color: var(--ivory);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+}
+
+.footer-couple span {
+  color: #d0b078;
+  font-style: italic;
+}
+
+.footer-date {
+  margin: 0 0 9px;
+  color: #d0b078;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+}
+
+.footer-date span {
+  padding: 0 5px;
+}
+
+.footer-message {
+  margin: 0 0 14px;
+  color: rgba(248, 243, 231, 0.82);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-style: italic;
+}
+
+.footer-credit {
+  color: rgba(248, 243, 231, 0.55);
+  font-size: 7px;
+  letter-spacing: 1.8px;
+}
+
+@media (max-width: 600px) {
+  .site-header { padding: 13px 12px 10px; }
+  .header-logo { width: 48px; height: 48px; }
+  .header-title { font-size: 29px; }
+  .header-kicker { font-size: 7px; letter-spacing: 1.4px; }
+  .header-date { font-size: 7px; letter-spacing: 1.5px; }
+  .site-nav {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0 7px;
+    scrollbar-width: none;
+  }
+  .site-nav::-webkit-scrollbar { display: none; }
+  .nav-link {
+    flex: 0 0 auto;
+    min-height: 45px;
+    padding: 0 11px;
+    font-size: 8px;
+    letter-spacing: 0.45px;
+  }
+  .app-shell > .welcome,
+  .app-shell > .programme-choice-page,
+  .app-shell > .invitation,
+  .app-shell > .programme,
+  .app-shell > .reception-page {
+    margin-top: 18px;
+    margin-bottom: 22px;
+  }
+  .site-footer { padding: 25px 14px 20px; }
+  .footer-couple { font-size: 27px; }
+  .footer-date { font-size: 8px; letter-spacing: 1.2px; }
+}
+
+/* =====================================================
+   MARY & PRINCE — PREMIUM VISUAL REFINEMENT
+   Added as a final layer so existing page functionality
+   and the original component styles remain intact.
+===================================================== */
+
+:root {
+  --ivory: #f8f3e7;
+  --emerald: #1f4d3a;
+  --deep-emerald: #123528;
+  --gold: #b08d57;
+  --soft-gold: #d7c19a;
+  --ink: #26382f;
+  --muted-ink: #68746b;
+  --paper: #fffdf7;
+  --line: rgba(176, 141, 87, 0.34);
+  --soft-shadow: 0 22px 60px rgba(24, 55, 40, 0.09);
+}
+
+html {
+  background: var(--ivory);
+  scroll-padding-top: 70px;
+}
+
+body {
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse at 12% 18%, rgba(215, 193, 154, 0.13), transparent 34%),
+    radial-gradient(ellipse at 88% 72%, rgba(31, 77, 58, 0.055), transparent 35%),
+    var(--ivory);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+/* Header: a more deliberate editorial masthead */
+.site-header {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 22px 24px 19px;
+  background:
+    radial-gradient(ellipse at 50% -80%, rgba(215, 193, 154, 0.2), transparent 58%),
+    linear-gradient(135deg, #173d30 0%, #102f24 52%, #1c4936 100%);
+  border-bottom: 1px solid rgba(215, 193, 154, 0.6);
+}
+
+.site-header::before,
+.site-header::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  width: 210px;
+  height: 210px;
+  border: 1px solid rgba(215, 193, 154, 0.13);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.site-header::before {
+  top: -155px;
+  left: -80px;
+}
+
+.site-header::after {
+  right: -80px;
+  bottom: -165px;
+}
+
+.header-brand {
+  gap: 17px;
+}
+
+.header-logo {
+  width: 66px;
+  height: 66px;
+  padding: 5px;
+  border: 1px solid rgba(215, 193, 154, 0.52);
+  border-radius: 50%;
+  background: rgba(248, 243, 231, 0.06);
+  box-sizing: border-box;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.12));
+}
+
+.header-brand-copy {
+  gap: 4px;
+}
+
+.header-kicker {
+  font-size: 8px;
+  letter-spacing: 2.7px;
+  color: var(--soft-gold);
+}
+
+.header-title {
+  font-size: clamp(32px, 4vw, 40px);
+  line-height: 0.98;
+  letter-spacing: 0.4px;
+}
+
+.header-date {
+  margin-top: 5px;
+  font-size: 8px;
+  letter-spacing: 2.6px;
+  color: rgba(248, 243, 231, 0.76);
+}
+
+/* Navigation: quiet, crisp and easy to scan */
+.site-nav {
+  min-height: 54px;
+  gap: clamp(4px, 1.4vw, 22px);
+  padding: 0 18px;
+  background: rgba(255, 253, 247, 0.96);
+  border-bottom: 1px solid rgba(176, 141, 87, 0.42);
+  box-shadow: 0 7px 22px rgba(24, 55, 40, 0.055);
+  backdrop-filter: blur(14px);
+}
+
+.nav-link {
+  position: relative;
+  min-height: 54px;
+  padding: 0 13px;
+  border-bottom: 0;
+  color: #526257;
+  font-size: 9px;
+  letter-spacing: 1.15px;
+  transition: color 220ms ease, transform 220ms ease;
+}
+
+.nav-link::after {
+  position: absolute;
+  right: 13px;
+  bottom: 10px;
+  left: 13px;
+  height: 1px;
+  content: '';
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 220ms ease;
+}
+
+.nav-link:hover {
+  color: var(--emerald);
+  transform: translateY(-1px);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.nav-link.active {
+  color: var(--emerald);
+  border-bottom-color: transparent;
+}
+
+/* Main pages sit on a subtle paper-like canvas */
+.app-shell > .welcome,
+.app-shell > .programme-choice-page,
+.app-shell > .invitation,
+.app-shell > .programme,
+.app-shell > .reception-page {
+  width: min(100% - 48px, 900px);
+  margin-top: 48px;
+  margin-bottom: 48px;
+  box-shadow: var(--soft-shadow);
+}
+
+/* Welcome / landing page */
+.welcome {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: min(690px, calc(100svh - 190px));
+  padding: clamp(52px, 7vw, 82px) 30px;
+  border: 1px solid rgba(176, 141, 87, 0.76);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(215, 193, 154, 0.19), transparent 43%),
+    linear-gradient(145deg, #fffdf7 0%, #f8f3e7 58%, #f4eddd 100%);
+  box-shadow:
+    inset 0 0 0 8px rgba(255, 253, 247, 0.88),
+    inset 0 0 0 9px rgba(176, 141, 87, 0.56),
+    0 24px 70px rgba(24, 55, 40, 0.1);
+}
+
+.welcome::before,
+.welcome::after {
+  position: absolute;
+  z-index: -1;
+  width: 190px;
+  height: 190px;
+  border: 1px solid rgba(176, 141, 87, 0.2);
+  border-radius: 50%;
+  content: '';
+  pointer-events: none;
+}
+
+.welcome::before {
+  top: -125px;
+  left: -100px;
+  box-shadow: 0 0 0 14px rgba(176, 141, 87, 0.035), 0 0 0 28px rgba(176, 141, 87, 0.025);
+}
+
+.welcome::after {
+  right: -115px;
+  bottom: -130px;
+  box-shadow: 0 0 0 14px rgba(31, 77, 58, 0.025), 0 0 0 28px rgba(31, 77, 58, 0.018);
+}
+
+.welcome .logo {
+  width: clamp(145px, 19vw, 190px);
+  margin-bottom: 19px;
+  filter: drop-shadow(0 8px 12px rgba(31, 77, 58, 0.08));
+}
+
+.welcome .title {
+  margin: 12px 0 8px;
+  color: var(--deep-emerald);
+  font-size: clamp(38px, 5.3vw, 58px);
+  line-height: 1;
+  letter-spacing: clamp(3px, 0.7vw, 7px);
+}
+
+.welcome .subtitle {
+  margin: 7px 0 12px;
+  color: #66756a;
+  font-size: clamp(10px, 1.3vw, 13px);
+  font-weight: 500;
+  letter-spacing: clamp(1.5px, 0.35vw, 3px);
+}
+
+.welcome .date {
+  position: relative;
+  margin: 8px 0 32px;
+  padding: 12px 24px;
+  color: #987542;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.8px;
+}
+
+.welcome .date::before,
+.welcome .date::after {
+  position: absolute;
+  top: 50%;
+  width: 24px;
+  height: 1px;
+  content: '';
+  background: var(--soft-gold);
+}
+
+.welcome .date::before { left: -12px; }
+.welcome .date::after { right: -12px; }
+
+.welcome .actions {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.welcome .button,
+.programme-choice-page .button {
+  min-width: 172px;
+  padding: 15px 22px;
+  border: 1px solid rgba(176, 141, 87, 0.8);
+  border-radius: 2px;
+  background: rgba(255, 253, 247, 0.42);
+  color: var(--emerald);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.55px;
+  box-shadow: 0 5px 16px rgba(31, 77, 58, 0.035);
+  transition: color 240ms ease, background 240ms ease, border-color 240ms ease, transform 240ms ease, box-shadow 240ms ease;
+}
+
+.welcome .button:hover,
+.programme-choice-page .button:hover {
+  transform: translateY(-3px);
+  border-color: var(--emerald);
+  background: var(--emerald);
+  color: var(--ivory);
+  box-shadow: 0 12px 24px rgba(31, 77, 58, 0.15);
+}
+
+/* Programme selection landing */
+.programme-choice-page {
+  position: relative;
+  display: grid;
+  min-height: 520px;
+  place-items: center;
+  padding: 70px 30px;
+  box-sizing: border-box;
+  border: 1px solid var(--line);
+  background: linear-gradient(145deg, #fffdf7, #f5efdf);
+  box-shadow: var(--soft-shadow);
+  text-align: center;
+}
+
+.programme-choice-page::before {
+  position: absolute;
+  inset: 17px;
+  border: 1px solid rgba(176, 141, 87, 0.42);
+  content: '';
+  pointer-events: none;
+}
+
+.programme-choice-page .welcome-content {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 620px);
+}
+
+.programme-choice-page .eyebrow {
+  margin: 0 0 13px;
+  color: #a17c48;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.programme-choice-page h1 {
+  margin: 0 0 12px;
+  color: var(--deep-emerald);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(38px, 5vw, 54px);
+  font-weight: 500;
+}
+
+.programme-choice-page .welcome-description {
+  margin: 0 auto 30px;
+  color: var(--muted-ink);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.programme-choice-page .actions {
+  flex-direction: column;
+  align-items: center;
+}
+
+.programme-choice-page .button {
+  width: min(100%, 310px);
+}
+
+/* Invitation: keep the printed-card identity, elevate the finish */
+.invitation {
+  border: 1px solid rgba(176, 141, 87, 0.72);
+  background:
+    radial-gradient(ellipse at 50% 10%, rgba(215, 193, 154, 0.16), transparent 42%),
+    linear-gradient(145deg, #fffdf7, #f7f0df);
+  box-shadow: inset 0 0 0 8px rgba(255, 253, 247, 0.8), var(--soft-shadow);
+}
+
+.invitation-content {
+  padding: 14px 0;
+}
+
+.invitation-logo {
+  width: clamp(105px, 13vw, 135px);
+  margin-bottom: 14px;
+  filter: drop-shadow(0 5px 8px rgba(31, 77, 58, 0.08));
+}
+
+.invitation-intro {
+  color: #8f744b;
+  font-size: 10px;
+  letter-spacing: 2.8px;
+  line-height: 1.65;
+}
+
+.couple-names {
+  margin: 2px 0 18px;
+  color: var(--deep-emerald);
+  font-size: clamp(54px, 7vw, 76px);
+  line-height: 0.95;
+}
+
+.invitation-message {
+  color: #657269;
+  font-size: 9px;
+  letter-spacing: 1.7px;
+}
+
+.wedding-date {
+  max-width: 430px;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.date-side {
+  border-color: rgba(176, 141, 87, 0.7);
+}
+
+.date-side span {
+  color: #657269;
+  font-size: 10px;
+  letter-spacing: 1.6px;
+}
+
+.date-center strong {
+  color: var(--deep-emerald);
+  font-size: 76px;
+}
+
+.venue h2,
+.colors h2,
+.rsvp h2 {
+  color: #987542;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.venue p,
+.colors p,
+.rsvp p {
+  color: #536257;
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  line-height: 1.65;
+}
+
+/* Programme pages: editorial typography and refined paper cards */
+.programme,
+.reception-page {
+  border: 1px solid rgba(176, 141, 87, 0.68);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(215, 193, 154, 0.16), transparent 40%),
+    linear-gradient(145deg, #fffdf7, #f7f0df);
+  box-shadow: inset 0 0 0 7px rgba(255, 253, 247, 0.65), var(--soft-shadow);
+}
+
+.programme-frame,
+.reception-frame {
+  inset: 20px;
+  border-color: rgba(176, 141, 87, 0.55);
+}
+
+.programme-content h1,
+.reception-content h1 {
+  color: var(--deep-emerald);
+  letter-spacing: 3.5px;
+}
+
+.programme-subtitle,
+.reception-content h2 {
+  color: var(--deep-emerald);
+}
+
+.programme-divider {
+  position: relative;
+  width: 56px;
+  height: 2px;
+  margin-bottom: 30px;
+  background: var(--gold);
+}
+
+.programme-divider::after {
+  position: absolute;
+  top: -3px;
+  left: calc(50% - 3px);
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--gold);
+  background: #fffdf7;
+  content: '';
+  transform: rotate(45deg);
+}
+
+.programme-section-title {
+  color: #987542;
+  font-size: 11px;
+  letter-spacing: 2.4px;
+}
+
+.service-item,
+.minister-item {
+  border-bottom-color: rgba(176, 141, 87, 0.24);
+  transition: background 180ms ease, padding 180ms ease;
+}
+
+.service-item:hover,
+.minister-item:hover {
+  padding-right: 9px;
+  padding-left: 9px;
+  background: rgba(176, 141, 87, 0.055);
+}
+
+.service-number,
+.minister-number {
+  color: #a88450;
+}
+
+.service-event,
+.minister-details strong {
+  color: #344b3d;
+}
+
+.service-note,
+.minister-details span {
+  color: #9a7a4d;
+}
+
+.hymn-button {
+  border-radius: 2px;
+}
+
+.hymn-button:focus-visible {
+  outline-offset: 5px;
+}
+
+.hymn-content {
+  border-left: 2px solid var(--gold);
+  border-radius: 0 5px 5px 0;
+  background: rgba(176, 141, 87, 0.075);
+}
+
+.reception-date {
+  color: #987542;
+  letter-spacing: 2.3px;
+}
+
+.reception-button {
+  border-radius: 2px;
+  letter-spacing: 1.7px;
+  box-shadow: 0 8px 20px rgba(31, 77, 58, 0.12);
+  transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease, color 220ms ease;
+}
+
+.reception-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(31, 77, 58, 0.15);
+}
+
+.back-button {
+  border-radius: 2px;
+  border-color: rgba(176, 141, 87, 0.78);
+  color: #536257;
+  font-size: 9px;
+  letter-spacing: 1.7px;
+  transition: transform 200ms ease, color 200ms ease, background 200ms ease;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  background: var(--emerald);
+  color: var(--ivory);
+}
+
+/* Footer: strong, elegant finish */
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  padding: 36px 20px 27px;
+  border-top: 1px solid rgba(215, 193, 154, 0.58);
+  background:
+    radial-gradient(ellipse at 50% 120%, rgba(215, 193, 154, 0.15), transparent 55%),
+    linear-gradient(135deg, #173d30, #102f24 62%, #1b4634);
+}
+
+.site-footer::before {
+  display: block;
+  width: 46px;
+  height: 1px;
+  margin: 0 auto 15px;
+  background: var(--soft-gold);
+  content: '';
+}
+
+.footer-couple {
+  margin-bottom: 7px;
+  font-size: 36px;
+  letter-spacing: 0.3px;
+}
+
+.footer-date {
+  font-size: 8px;
+  letter-spacing: 2.2px;
+}
+
+.footer-message {
+  margin-bottom: 17px;
+  font-size: 18px;
+  color: rgba(248, 243, 231, 0.84);
+}
+
+.footer-credit {
+  font-size: 7px;
+  letter-spacing: 2.1px;
+}
+
+/* Responsive refinements */
+@media (max-width: 700px) {
+  .app-shell > .welcome,
+  .app-shell > .programme-choice-page,
+  .app-shell > .invitation,
+  .app-shell > .programme,
+  .app-shell > .reception-page {
+    width: calc(100% - 28px);
+    margin-top: 24px;
+    margin-bottom: 28px;
+  }
+
+  .site-header {
+    padding: 17px 12px 15px;
+  }
+
+  .header-logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .header-title {
+    font-size: 31px;
+  }
+
+  .header-kicker {
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+  .header-date {
+    font-size: 7px;
+    letter-spacing: 1.9px;
+  }
+
+  .site-nav {
+    min-height: 49px;
+    justify-content: flex-start;
+    gap: 2px;
+    padding: 0 9px;
+  }
+
+  .nav-link {
+    min-height: 49px;
+    padding: 0 12px;
+    font-size: 8px;
+    letter-spacing: 0.75px;
+  }
+
+  .nav-link::after {
+    right: 12px;
+    bottom: 8px;
+    left: 12px;
+  }
+
+  .welcome {
+    min-height: 570px;
+    padding: 52px 20px;
+  }
+
+  .welcome .logo {
+    width: 142px;
+    margin-bottom: 17px;
+  }
+
+  .welcome .title {
+    font-size: clamp(34px, 9vw, 44px);
+    letter-spacing: 3px;
+  }
+
+  .welcome .subtitle {
+    max-width: 280px;
+    font-size: 10px;
+    line-height: 1.8;
+    letter-spacing: 1.5px;
+  }
+
+  .welcome .date {
+    margin-bottom: 25px;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .welcome .actions {
+    width: min(100%, 290px);
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .welcome .button {
+    width: 100%;
+    min-width: 0;
+    padding: 15px 14px;
+  }
+
+  .invitation {
+    min-height: 0;
+    padding: 34px 23px;
+  }
+
+  .invitation-content {
+    padding: 14px 0;
+  }
+
+  .invitation-logo {
+    width: 105px;
+  }
+
+  .couple-names {
+    font-size: clamp(48px, 12vw, 64px);
+    line-height: 1;
+  }
+
+  .wedding-date {
+    gap: 12px;
+  }
+
+  .date-side span {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .date-center strong {
+    font-size: 64px;
+  }
+
+  .venue p,
+  .colors p,
+  .rsvp p {
+    font-size: 8px;
+    line-height: 1.7;
+  }
+
+  .programme,
+  .reception-page {
+    padding: 45px 27px;
+  }
+
+  .programme-frame,
+  .reception-frame {
+    inset: 13px;
+  }
+
+  .programme-content h1 {
+    font-size: clamp(30px, 8vw, 38px);
+  }
+
+  .programme-subtitle {
+    font-size: clamp(40px, 10vw, 52px);
+  }
+
+  .service-item,
+  .minister-item {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 12px;
+    padding: 12px 0;
+  }
+
+  .service-event {
+    font-size: 11px;
+    letter-spacing: 0.3px;
+  }
+
+  .minister-details strong {
+    font-size: 11px;
+  }
+
+  .site-footer {
+    padding: 30px 14px 23px;
+  }
+
+  .footer-couple {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 380px) {
+  .header-brand { gap: 10px; }
+  .header-logo { width: 47px; height: 47px; }
+  .header-title { font-size: 27px; }
+  .header-kicker { font-size: 6px; letter-spacing: 1.4px; }
+  .header-date { font-size: 6px; letter-spacing: 1.4px; }
+  .nav-link { padding: 0 9px; font-size: 7px; }
+  .app-shell > .invitation,
+  .app-shell > .programme,
+  .app-shell > .reception-page { width: calc(100% - 18px); }
+  .invitation { padding-right: 15px; padding-left: 15px; }
+  .wedding-date { gap: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================
+   WEDDING FOOTER
+========================= */
+
+.site-footer {
+  background: #00251c;
+  color: #f8f3e7;
+  border-top: 1px solid #b08d57;
+  padding: 30px 7%;
+  margin-top: 50px;
+}
+
+.footer-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+}
+
+.footer-wedding,
+.footer-contact {
+  flex: 1;
+}
+
+.footer-wedding {
+  text-align: left;
+}
+
+.footer-contact {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-couple {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  margin: 0 0 4px;
+}
+
+.footer-couple span {
+  color: #b08d57;
+  font-style: italic;
+}
+
+.footer-date {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #d8c9aa;
+  margin: 0;
+}
+
+.footer-contact span {
+  color: #b08d57;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.footer-contact strong {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+
+.footer-contact a {
+  color: #d8c9aa;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #b08d57;
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 25px 20px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-wedding,
+  .footer-contact {
+    text-align: center;
+  }
+
+  .footer-couple {
+    font-size: 29px;
+  }
+}

@@ -10,7 +10,26 @@ function App() {
   console.log(page)
 
   return (
-    <main>
+    <main className="app-shell">
+      <header className="site-header">
+        <div className="header-brand">
+          <img src="/mp-logo.png" alt="Mary and Prince monogram" className="header-logo" />
+          <div className="header-brand-copy">
+            <span className="header-kicker">THE WEDDING CELEBRATION OF</span>
+            <span className="header-title">Mary &amp; Prince</span>
+            <span className="header-date">14 NOVEMBER 2026</span>
+          </div>
+        </div>
+      </header>
+
+      <nav className="site-nav" aria-label="Main navigation">
+        <button type="button" className={page === 'welcome' && !programmeChoice ? 'nav-link active' : 'nav-link'} onClick={() => { setPage('welcome'); setProgrammeChoice(false) }}>Home</button>
+        <button type="button" className={page === 'invitation' ? 'nav-link active' : 'nav-link'} onClick={() => { setPage('invitation'); setProgrammeChoice(false) }}>Invitation</button>
+        <button type="button" className={page === 'programme' ? 'nav-link active' : 'nav-link'} onClick={() => { setPage('programme'); setProgrammeChoice(false) }}>Order of Service</button>
+        <button type="button" className={page === 'reception' ? 'nav-link active' : 'nav-link'} onClick={() => { setPage('reception'); setProgrammeChoice(false) }}>Reception</button>
+        <button type="button" className={page === 'gallery' ? 'nav-link active' : 'nav-link'} onClick={() => { setPage('gallery'); setProgrammeChoice(false) }}>Gallery</button>
+      </nav>
+
       {page === 'welcome' && !programmeChoice && (
         <section className="welcome">
           <img
@@ -510,19 +529,17 @@ function App() {
     </section>
   )}
 
+
   {/* =========================
       RECEPTION PROGRAMME PAGE
   ========================= */}
 
   {page === 'reception' && (
-  <section className="reception-page">
+    <section className="reception-page">
+      <div className="reception-frame"></div>
 
-    <div className="reception-frame"></div>
-
-    <div className="reception-content">
-
+      <div className="reception-content">
         <h1>RECEPTION</h1>
-
         <h2>MARY & PRINCE</h2>
 
         <p className="reception-date">
@@ -536,124 +553,88 @@ function App() {
         </h3>
 
         <div className="reception-list">
-
           <div className="service-item">
             <span className="service-number">01</span>
-            <span className="service-event">
-              Introduction of Bride/Grooms Parents
-            </span>
+            <span className="service-event">Arrival of Guests</span>
           </div>
 
           <div className="service-item">
             <span className="service-number">02</span>
-            <span className="service-event">
-              Introduction of Chairman
-            </span>
+            <span className="service-event">Introduction of Dignitaries</span>
           </div>
 
           <div className="service-item">
             <span className="service-number">03</span>
-            <span className="service-event">
-              Introduction of Members of High Table / Special Guests
-            </span>
+            <span className="service-event">Entrance of the Groom and Bride’s Family</span>
           </div>
 
           <div className="service-item">
             <span className="service-number">04</span>
-            <span className="service-event">
-              Procession (Bride and Groom)
-            </span>
+            <span className="service-event">Entrance of the Couple</span>
           </div>
 
           <div className="service-item">
             <span className="service-number">05</span>
-            <span className="service-event">
-              Chairman's remarks
-            </span>
+            <span className="service-event">Opening Prayer</span>
           </div>
 
           <div className="service-item">
             <span className="service-number">06</span>
-            <span className="service-event">
-              Opening Prayer
-            </span>
+            <span className="service-event">Chairman’s Opening Remark</span>
           </div>
 
           <div className="service-item">
             <span className="service-number">07</span>
-
             <div className="service-event">
-
-              <strong>Special Dance by:</strong>
-
+              <strong>Special Dance:</strong>
               <ul className="dance-list">
-                <li>Bride's Mum(s)</li>
-                <li>Groom's Mum</li>
-                <li>Both Dads</li>
+                <li>Bride’s Mums / Groom’s Mum</li>
+                <li>Bride’s Dads / Groom’s Dad</li>
               </ul>
-
             </div>
           </div>
 
           <div className="service-item">
             <span className="service-number">08</span>
-            <span className="service-event">
-              Second Entrance
-            </span>
+            <span className="service-event">Second Entrance</span>
           </div>
 
           <div className="service-item">
             <span className="service-number">09</span>
-            <span className="service-event">
-              Cutting of Cake
-            </span>
+            <span className="service-event">Couple’s First Dance</span>
           </div>
 
           <div className="service-item">
             <span className="service-number">10</span>
-            <span className="service-event">
-              Couple's First Dance
-            </span>
+            <span className="service-event">Cutting of the Cake</span>
           </div>
 
           <div className="service-item">
             <span className="service-number">11</span>
-            <span className="service-event">
-              Games
-            </span>
+            <span className="service-event">Game</span>
           </div>
 
           <div className="service-item">
             <span className="service-number">12</span>
-            <span className="service-event">
-              Couples Dance with Family and Friends
-            </span>
+            <span className="service-event">Dance with Friends and Families</span>
           </div>
 
           <div className="service-item">
             <span className="service-number">13</span>
-            <span className="service-event">
-              Presentation
-            </span>
+            <span className="service-event">Refreshment</span>
           </div>
 
           <div className="service-item">
             <span className="service-number">14</span>
-            <span className="service-event">
-              Vote of thanks
-            </span>
+            <span className="service-event">Closing Remark</span>
           </div>
 
           <div className="service-item">
             <span className="service-number">15</span>
-            <span className="service-event">
-              Closing Prayers
-            </span>
+            <span className="service-event">Closing Prayer</span>
           </div>
-
         </div>
 
-        {/* BACK TO ORDER OF THE DAY */}
         <button
           type="button"
           className="back-button"
@@ -661,11 +642,10 @@ function App() {
         >
           ← BACK TO ORDER OF THE DAY
         </button>
-
       </div>
-
     </section>
   )}
+
 
   
       {/* WEDDING GALLERY PAGE */}
@@ -675,7 +655,22 @@ function App() {
         />
       )}
 
+      <footer className="site-footer">
+        <div className="footer-inner">
 
+          <div className="footer-wedding">
+            <p className="footer-couple">Mary <span>&amp;</span> Prince</p>
+            <p className="footer-date">14 NOVEMBER 2026 · ABUJA</p>
+          </div>
+
+          <div className="footer-contact">
+            <span>WEBSITE BY</span>
+            <strong>EMMANUEL PRINCE</strong>
+            <a href="tel:+2348132025732">+234 813 202 5732</a>
+          </div>
+
+        </div>
+      </footer>
     </main>
   )
 
