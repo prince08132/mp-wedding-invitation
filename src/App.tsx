@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import WeddingGallery from './WeddingGallery'
+import Videos from './Videos'
 
 function App() {
   const [page, setPage] = useState('welcome')
@@ -28,6 +29,7 @@ function App() {
         <button type="button" className={page === 'programme' ? 'nav-link active' : 'nav-link'} onClick={() => { setPage('programme'); setProgrammeChoice(false) }}>Order of Service</button>
         <button type="button" className={page === 'reception' ? 'nav-link active' : 'nav-link'} onClick={() => { setPage('reception'); setProgrammeChoice(false) }}>Reception</button>
         <button type="button" className={page === 'gallery' ? 'nav-link active' : 'nav-link'} onClick={() => { setPage('gallery'); setProgrammeChoice(false) }}>Gallery</button>
+        <button type="button"className={page === 'videos' ? 'nav-link active' : 'nav-link'} onClick={() => { setPage('videos'); setProgrammeChoice(false) }}>Videos</button>
       </nav>
 
       {page === 'welcome' && !programmeChoice && (
@@ -651,6 +653,13 @@ function App() {
       {/* WEDDING GALLERY PAGE */}
       {page === 'gallery' && (
         <WeddingGallery
+          onBack={() => setPage('welcome')}
+        />
+      )}
+
+      {/* WEDDING VIDEOS PAGE */}
+      {page === 'videos' && (
+        <Videos
           onBack={() => setPage('welcome')}
         />
       )}
